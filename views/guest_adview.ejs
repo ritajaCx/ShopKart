@@ -1,0 +1,184 @@
+<!Doctype html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+       
+        <title><%=title%></title>
+    </head>
+    <body>
+    
+        
+        <h2>Advertisement Details for <%=addet.title%></h2>
+       
+        <table>
+
+            <table class="mytable">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Title </th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Time Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+        
+                    <tr>
+                        <% var imgageUrl = "/media/"+addet._id+"."+addet.image%>
+                            <td>
+                                <img src=<%=imgageUrl%>>
+                            </td>
+                        <td>
+                            <%=addet.title%>
+                        </td>
+                        <td>
+                            <%=addet.description%>
+                        </td>
+                        <td>
+                            <%=addet.price%>
+                        </td>
+                        <td>
+                            <%=addet.createdDateTime%>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <br>
+
+            <div class="member">
+                <p style="font-weight: bold;background-color:  rgb(10, 8, 156);color: white;height: 30px; margin-top: 22px;"> Seller  </p>
+                <p><strong>Name  </strong>
+                    <%=memberData.name%>
+                </p>
+                <p><strong>Email </strong>
+                    <%=memberData.email%>
+                </p>
+                <p><strong>Location </strong>
+                    <%=memberData.location%>
+                </p>
+               <button class="buttonK" onclick="window.location.href = '/guest/contactMember/<%=memberData._id%>/';">Contact Seller</button>
+                 
+             </div>
+         
+            <button class="button" id="logout"  onclick="window.location.href = '/guest/viewallads';">
+                All Advertisements
+            </button>
+        </body>
+        <style>
+      
+            * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+                  
+                  html { width: 100%; height:100%; overflow:hidden; }
+                  
+                  body { 
+                    width: 100%;
+                    height:100%;
+                    font-family: 'Times New Roman', Times, serif;
+                   
+                  }
+              h1 {
+                  width: 99%;
+                  background-color: rgb(188, 245, 124);
+                  text-align: center;
+                  color: black;
+                  height: 70px;
+                  margin: 0px 0px 0px 0px;
+                
+                  text-shadow: gray 2px 2px;
+                  font-family: 'Times New Roman', Times, serif;
+          
+              }
+              h2 {
+                  width: 99%;
+                  background-color: rgb(10, 8, 156);
+                  text-align: center;
+                  color:white;
+                  height: 50px;
+                  padding-top: 1%;
+                  margin: 0px 0px 0px 0px;
+                  font-family: 'Times New Roman', Times, serif;
+          
+              }
+          
+              .mytable {
+                  border-collapse: collapse;
+                  width: 99%;
+                  table-layout: fixed;
+              }
+            
+             
+              td {
+                  border: 1px solid black;
+                  height: 30px;
+                  text-align: center;
+                  font-family: 'Times New Roman', Times, serif;
+              }
+              button{
+                background-color: rgb(11, 90, 81);
+                color: white;
+                text-shadow: gray 2px 2px;
+                font-weight: bold;
+                font-family: 'Times New Roman', Times, serif;
+                height: 40px;
+                border: none;
+              
+            }
+            .buttonK{
+                background-color: rgb(90, 11, 11);
+                color: white;
+                text-shadow: gray 2px 2px;
+                font-weight: bold;
+                font-family: 'Times New Roman', Times, serif;
+                height: 30px;
+                border: none;
+              
+            }
+           .buttonD{
+                background-color: rgb(45, 134, 156);
+                color: white;
+                text-shadow: gray 2px 2px;
+                font-weight: bold;
+                font-family: 'Times New Roman', Times, serif;
+                height: 30px;
+                border: none;
+              
+            }
+              
+              th {
+                  border: 1px solid black;
+                  height: 40px;
+                  background-color: rgb(9, 194, 194);
+              }
+              tbody tr {
+                  background-color: #f2f2f2;
+                  padding: 10%
+              }
+                
+              
+
+                  .member {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        background-color: bisque;
+        text-align: center;
+        border : darkblue
+    }     
+                .a{
+                    padding: 10px;
+                    background-color: rgb(133, 7, 7);
+                    color: white;
+                    text-shadow: 2px 2px gray;
+                }
+          
+          </style>
+    </html>
+
+        </table>
+
+       </body>
+
+</html> 

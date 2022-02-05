@@ -1,0 +1,171 @@
+<!Doctype html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Guest Ad list Page</title>
+    </head>
+    <body>
+        <h1> AdManager</h1>
+        
+        <h2>Advertisement Dashboard</h2>
+        <table class="mytable">
+            <thead>
+                <tr>
+                    <th>Ad Title </th>
+                    <th>Posted On</th>
+                    
+                    <th >Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%
+                    adData.forEach(function (dt){
+                        %>
+                        <tr>
+                            <td><%=dt.title%></td>
+                            <td>
+                            <%=dt.createdDateTime %>
+                            </td>
+                            <td>
+                                <!-- <a href="/member/viewaddet/<%=dt._id%>"> View Details </a> 
+                            
+                          
+                         
+                                <a href="/member/delads/<%=dt._id%>"> Delete Ad </a> <br> -->
+
+                                <button class="buttonK" id="add" onclick="window.location.href = '/guest/viewaddet/<%=dt._id%>';">
+                                    View Details
+                                 </button>
+                                 
+                            </td>
+                               
+                            
+                        </tr>
+                        <%
+                    })
+              
+                %>
+            </tbody>
+        </table>
+        <br>
+        
+        <button class="button" id="logout"  onclick="window.location.href = '/guest/';">
+            Home       </button>
+    </body>
+    <style>
+  
+        * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+              
+              html { width: 100%; height:100%; overflow:hidden; }
+              
+              body { 
+                width: 100%;
+                height:100%;
+                font-family: 'Times New Roman', Times, serif;
+               
+              }
+          h1 {
+              width: 99%;
+              background-color: rgb(188, 245, 124);
+              text-align: center;
+              color: black;
+              height: 70px;
+              margin: 0px 0px 0px 0px;
+              padding-top: 2%;
+              text-shadow: gray 2px 2px;
+              font-family: 'Times New Roman', Times, serif;
+      
+          }
+          h2 {
+              width: 99%;
+              background-color: rgb(10, 8, 156);
+              text-align: center;
+              color:white;
+              height: 50px;
+              padding-top: 1%;
+              margin: 0px 0px 0px 0px;
+              font-family: 'Times New Roman', Times, serif;
+      
+          }
+      
+          .mytable {
+              border-collapse: collapse;
+              width: 99%;
+              table-layout: fixed;
+          }
+      
+          
+          td {
+              border: 1px solid black;
+              height: 40px;
+              text-align: center;
+              font-family: 'Times New Roman', Times, serif;
+          }
+          button{
+            background-color: rgb(11, 90, 81);
+            color: white;
+            text-shadow: gray 2px 2px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            height: 40px;
+            border: none;
+            width: 100px;
+          
+        }
+        .buttonK{
+            background-color: rgb(90, 11, 11);
+            color: white;
+            text-shadow: gray 2px 2px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            height: 30px;
+            border: none;
+          
+        }
+        .buttonU{
+            background-color: rgb(163, 142, 23);
+            color: white;
+            text-shadow: gray 2px 2px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            height: 30px;
+            border: none;
+          
+        }
+       .buttonD{
+            background-color: rgb(45, 134, 156);
+            color: white;
+            text-shadow: gray 2px 2px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            height: 30px;
+            border: none;
+          
+        }
+          
+          th {
+              border: 1px solid black;
+              height: 40px;
+              background-color: rgb(9, 194, 194);
+          }
+          tbody tr {
+              background-color: #f2f2f2;
+              padding: 10%
+          }
+            
+          b{
+            padding: 10px;
+                background-color: darkblue;
+                color: white;
+                text-shadow: 2px 2px gray;
+          }
+            .a{
+                padding: 10px;
+                background-color: rgb(133, 7, 7);
+                color: white;
+                text-shadow: 2px 2px gray;
+            }
+      
+      </style>
+</html>

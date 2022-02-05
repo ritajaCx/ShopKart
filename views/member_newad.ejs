@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Post New Ad</title>
+    </head>
+    <body>
+        <h2 style="text-align: center;"> Post an Advertisement </h2>
+        <center>
+        <form action="/member/newadmem" method="post" enctype="multipart/form-data">
+            
+
+            <label> Title </label><br>
+            <input type="text" name="title">
+            <br><br>
+            <label> Description </label><br>
+            <input type="text" name="description"></input>
+            <br><br>
+            <label> Price </label><br>
+            <input type="number" name="price"></input>
+            <br><br>
+            <label> Product Image </label><br>
+            <input type="file" style="margin-left: 50px;" name="adimage"></input>
+            <br><br><br><br>
+            <button class="button" type="submit"> Post</button>
+     
+        </form>
+    </center>
+    </body>
+    <style>
+              
+        * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+        
+        html { width: 100%; height:100%; overflow:hidden; }
+        
+        body { 
+          width: 100%;
+          height:100%;
+          font-family:'calibri';
+          padding-top: 3%;
+          background: linear-gradient(to bottom, #ecbfee 0%, #43a2b3 100%);
+        
+        }
+        form{
+           
+            width: 350px;
+            height: 350px;
+            box-shadow: cadetblue;
+           padding: 3%;
+           
+            background: linear-gradient(to bottom, #2c6a75 0%, #43a2b3 100%);
+          
+            color:white;
+            text-shadow:2px 2px  gray;
+          
+        }
+        div{
+            padding: 10px;
+        }
+     
+        
+        button{
+            /* background-color: rgb(11, 90, 81); */
+            background-color:#147979;
+            color: white;
+            text-shadow: gray 2px 2px;
+            font-weight: bold;
+            font-family: 'calibri';
+            height: 30px;
+            width: 100px;
+            border: none;
+            font-size: medium;
+          
+        }
+        h2{
+                 
+                  font-family: 'calibri';
+                  width: 100% ;
+                  font-size: xx-large;
+           
+                    color: rgb(8, 112, 112);
+                    text-shadow: 2px 2px gray;
+        
+        }
+                
+        
+        
+    </style>
+</html>

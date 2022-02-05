@@ -1,0 +1,198 @@
+<!Doctype html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+       
+        <title><%=title%></title>
+    </head>
+    <body>
+
+        <h2> Member Detail & Posted Advertisements</h2>
+       
+        <table>
+
+            <table class="mytable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email ID </th>
+                        <th>Password</th>
+                        <th>Govt ID Proof</th>
+                        <th>Location</th>
+                        <th>Address</th>
+                        <th>PIN Code</th>
+                        <th>Contact Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <% if(memberData.length> 0 )
+                {
+                    memberData.forEach(function (data){
+                                        %>      
+                                                <td><%=data.name%> </td>
+                                                <td><%=data.email%> </td>
+                                                <td><%=data.password%> </td>
+                                                <td><%=data.govtid%> </td>
+                                                <td><%=data.location%> </td>
+                                                <td><%=data.address%> </td>
+                                                <td><%=data.pincode%> </td>
+                                                <td><%=data.contact%> </td>
+
+                        <% }) } %>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <br>
+                    <center>
+                    <table style="background-color: aqua;">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Title </th>
+                                <th style="width: 20px;">Price</th> 
+                                <th>Posted On</th>                                     
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if(adData.length> 0 )
+                                {
+                                    adData.forEach(function (data){
+                                %>
+                                <tr>
+                                    <% var imgUrl = "/media/"+data._id+"."+data.image%>
+                                    <td>
+                                        <img src=<%=imgUrl%>>
+                                    </td>                
+                                    <td>
+                                        <%=data.title%>
+                                    </td>
+
+                                    <td>
+                                        <%=data.price%>
+                                    </td> 
+                                    <td>
+                                        <%=data.createdDateTime%>
+                                    </td> 
+
+                                </tr>
+                                <% }) } %>
+                            </table>   </tbody></center>
+         
+        </body>
+        <style>
+      
+            * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+                  
+                  html { width: 100%; height:100%; overflow:hidden; }
+                  
+                  body { 
+                    width: 100%;
+                    height:100%;
+                    font-family: 'Times New Roman', Times, serif;
+                   
+                  }
+              h1 {
+                  width: 99%;
+                  background-color: rgb(188, 245, 124);
+                  text-align: center;
+                  color: black;
+                  height: 70px;
+                  margin: 0px 0px 0px 0px;
+                
+                  text-shadow: gray 2px 2px;
+                  font-family: 'Times New Roman', Times, serif;
+          
+              }
+              h2 {
+                  width: 99%;
+                  background-color: rgb(10, 8, 156);
+                  text-align: center;
+                  color:white;
+                  height: 50px;
+                  padding-top: 1%;
+                  margin: 0px 0px 0px 0px;
+                  font-family: 'Times New Roman', Times, serif;
+          
+              }
+          
+              .mytable {
+                  border-collapse: collapse;
+                  width: 99%;
+                  table-layout: fixed;
+              }
+            
+             
+              td {
+                  border: 1px solid black;
+                  height: 30px;
+                  text-align: center;
+                  font-family: 'Times New Roman', Times, serif;
+              }
+              button{
+                background-color: rgb(11, 90, 81);
+                color: white;
+                text-shadow: gray 2px 2px;
+                font-weight: bold;
+                font-family: 'Times New Roman', Times, serif;
+                height: 40px;
+                border: none;
+              
+            }
+            .buttonK{
+                background-color: rgb(90, 11, 11);
+                color: white;
+                text-shadow: gray 2px 2px;
+                font-weight: bold;
+                font-family: 'Times New Roman', Times, serif;
+                height: 30px;
+                border: none;
+              
+            }
+           .buttonD{
+                background-color: rgb(45, 134, 156);
+                color: white;
+                text-shadow: gray 2px 2px;
+                font-weight: bold;
+                font-family: 'Times New Roman', Times, serif;
+                height: 30px;
+                border: none;
+              
+            }
+              
+              th {
+                  border: 1px solid black;
+                  height: 40px;
+                  background-color: rgb(9, 194, 194);
+              }
+              tbody tr {
+                  background-color: #f2f2f2;
+                  padding: 10%
+              }
+                
+              
+
+                  .member {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        background-color: bisque;
+        text-align: center;
+        border : darkblue
+    }     
+                .a{
+                    padding: 10px;
+                    background-color: rgb(133, 7, 7);
+                    color: white;
+                    text-shadow: 2px 2px gray;
+                }
+          
+          </style>
+    </html>
+
+        </table>
+
+       </body>
+
+</html> 

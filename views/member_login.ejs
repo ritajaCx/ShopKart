@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title><%=title%></title>
+    </head>
+    <body>
+        <center>
+        <h1>Member Login</h1>
+        <form action="/member/loginverify" method="post">
+            <div>
+            <label>Email ID</label>
+            <input type ="email" name="email" required>
+            <br><br><br>
+            <label>Password</label>
+            <input type="password" name="password" required><br>
+            <a href ="/member/forgot" class="l"> Forgot Password </a> <br><br>
+            <br><br><br>
+            <button class="button" type="submit">Login</button> 
+            </div> 
+            <br><br>
+            <!-- <a href ="/member/forgot" class="l"> Forgot Password </a> <br><br> -->
+            <a href ="/member/register"> New Member? Register Here </a>
+        
+        </form>
+        <!-- <a href ="/member/forgot"> forgot Password </a> <br>
+        <a href ="/member/register"> New Member? Register Here </a> -->
+        </center>
+
+    </body>
+    <style>
+        
+        
+        * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+        
+        html { width: 100%; height:100%; overflow:hidden; }
+        
+        body { 
+          width: 100%;
+          height:100%;
+          font-family: 'calibri';
+          color: white;
+          padding: 20px;
+          background: linear-gradient(to bottom, #f0cbf0 0%, #43a2b3 100%);
+        }
+        form{
+            
+            font-size:large;
+            width: 320px;
+            height: 450px;
+            box-shadow: cadetblue;
+            padding: 50px;
+            background-color: rgb(4, 156, 156);
+           
+            color: white;
+            text-shadow:2px 2px  gray;
+            background: linear-gradient(to bottom, #2c6a75 0%, #43a2b3 100%);
+          
+        }
+        form label {
+            margin-left: 80px;
+
+        }
+        form input
+        {
+            background-color: rgb(209, 214, 213);
+            height: 27px;
+            border: none;
+        }
+        .l{
+           
+            font-size: small;
+            color: rgb(20, 211, 211);
+           margin-left: 80px;
+        
+        }
+        
+        form a{
+            font-size: large;
+            text-shadow: rgb(20, 109, 211);
+            /* color: rgb(8, 38, 83) 2px 2px; */
+            color: white;
+        }
+
+        h1{
+           
+            color: rgb(9, 122, 122);
+            text-shadow: 2px 2px gray;
+        
+        }
+        div{
+            padding: 5px;
+        }
+      
+        
+        
+        button{
+            /* background-color: rgb(11, 90, 81); */
+            background-color:#158b8b;
+            color: white;
+            text-shadow: gray 2px 2px;
+            font-weight: bold;
+            font-family: 'calibri';
+            height: 40px;
+            width: 50px;
+            border: none;
+            font-size: medium;
+            box-shadow: gray 2px 1px;
+          
+        }
+            </style>
+        
+</html>

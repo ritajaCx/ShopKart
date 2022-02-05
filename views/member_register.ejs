@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title><%=title%></title> 
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+     
+        <center>
+            <H2> New Member Registration</H2>
+   
+            <form action="/member/memregister" method="post" >
+                <div>
+                    <label> Name </label><br>
+                    <input type="text" name="name" />
+                    <br><br>
+                
+             
+                    <label> Email ID</label><br>
+                    <input type="email" name="email" placeholder="joe@example.com" />
+                    <br><br>
+                    <label> Password </label><br>
+                    <input type="password" name="password"  placeholder="Min 8 characters" />
+                      <br><br>
+                    <label> Govt ID Proof</label><br>
+                    <input type="text" name="govtid" placeholder="enter Aadhar or PAN number" />
+                    <br><br>
+                    <label> Location </label><br>
+                    <input type="text" name="location" placeholder="eg : Delhi" />
+                    <br><br>
+                    <label> Address</label><br>
+                    <input type="text" name="address" />
+                    <br>
+                    <label> PIN Code</label><br>
+                    <input type="text" name="pincode" />
+                    <br><br>
+        
+                    <label> Contact Number </label><br>
+                    <input type="number" name="contact" />
+                </div>
+               <br >
+               <button class="button" type="submit">Register</button><br>
+                    
+
+               <a href="/member/login" style="text-align: left;"> Already Registered, Login</a>
+            </form>
+            
+           
+        
+
+        </center>
+        
+    </body>
+    <style>
+        
+* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+
+html { width: 100%; height:100%; overflow:hidden; }
+
+body { 
+    padding-top: 5px;
+  width: 100%;
+  height:100%;
+  font-family: 'calibri';
+  background: linear-gradient(to bottom, #eec8e9 0%, #43a2b3 100%);
+  
+}
+form{
+    color: white;
+    padding-top: 10px;
+    font-size: larger;
+    width: 350px;
+    height: 490px;
+    background: linear-gradient(to bottom, #2c6a75 0%, #43a2b3 100%);
+    text-shadow:2px 2px  gray;
+    border: none;
+    font-size: medium;
+
+}
+form a{
+            font-size: medium;
+            color: rgb(20, 211, 211);
+            text-shadow: rgb(7, 50, 114) 2px 2px;
+        }
+ form label {
+            margin-left: 80px;
+
+        }
+form input{
+    
+            background-color: rgb(209, 214, 213);
+            height: 17px;
+            width: 200px;
+            border: none;
+        
+}
+
+div{
+    padding: 6px;
+}
+div a {
+ 
+  color: white;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-shadow: seagreen 2px 2px;
+ 
+}
+h2{
+    color: rgb(16, 116, 116);
+    text-shadow: 2px 2px gray;
+}
+button{
+    background-color:#158b8b;
+            color: white;
+            text-shadow: gray 2px 2px;
+            font-weight: bold;
+            font-family: 'calibri';
+            height: 40px;
+            border: none;
+            font-size: medium;
+          
+        }
+
+    </style>
+</html>

@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Admin Form Req Details</title>
+    </head>
+    <body>
+        <center>
+        <H1> Contact the Seller </H1>
+        <div class="form">
+            <form action="/admin/sendmail" method="post">
+                
+                <input type="hidden" name="memid" value="<%=memberData._id%>" required="required" />
+                <input type="hidden" name="adid" value="<%=adData._id%>" required="required" />
+                <input type="hidden" name="name" value="<%=memberData.name%>" required="required" />
+                <label  >Product</label><br>
+                <input  name="title" value="<%=adData.title%>" required="required" /><br><br>
+                <label > Seller Email</label><br>      
+                <input type="text" name="email" value="<%=memberData.email%>" readonly /><br><br>
+                <label > Draft Message</label><br> 
+                <input type="text" name="message" class="msgbox" placeholder="your message here" required="required" />  <br><br>
+                <br><br><br>   <br><br> 
+                <button type="submit" class="button">Send Mail</button>
+            
+            </form>
+        </div>
+        </center>
+    </body>
+    <style>
+     
+              
+              * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+              
+              html { width: 100%; height:100%; overflow:hidden; }
+              
+              body { 
+                width: 100%;
+                height:100%;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                padding-top: 3%;
+                background: linear-gradient(to bottom, #d298d4 0%, #43a2b3 100%);
+          
+              
+              }
+              form{
+                  font-size:medium;
+                  width: 300px;
+                  height: 430px;
+                  box-shadow: cadetblue;
+                 padding-top: 3%;
+               font-family: 'calibri';
+                 background: linear-gradient(to bottom, #f6bff8 0%, #43a2b3 100%);
+                 font-weight: bold;
+                  color:black;
+                 
+                  
+              }
+              .msgbox{
+                height: 60px;
+              }
+              label{
+                  margin-left: 100px;
+                 
+              }
+              div{
+                  padding: 10px;
+              }
+              a:link, a:visited {
+                background-color: #36f436;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+              }
+              
+              button{
+                  background-color:  #43a2b3 ;
+                  color: white;
+                  font-weight: bold;
+                  font-family: 'calibri';
+                  height: 30px;
+                  width: 130px;
+                  border: none;
+                  box-shadow: thistle 2px 2px;
+              }
+              input{
+                border: none;
+                background-color: rgb(243, 241, 240);
+                width: 200px;
+                height: 30px;
+              }
+              h1{
+                       
+                  font-family: 'calibri';
+                  width: 100% ;
+                  color: #2c6a75;
+                  text-shadow: 2px 2px gray;
+                  text-align: center;
+                  font-size: x-large;
+              
+              }
+                      
+              
+              
+          </style>
+
+</html>

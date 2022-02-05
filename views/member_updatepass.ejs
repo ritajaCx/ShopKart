@@ -1,0 +1,89 @@
+<!Doctype html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Update Password</title>
+</head>
+<body>
+    <h2 style="text-align: center;"> Update Account Password  </h2>
+    <center>
+    <form action="/member/updatepassword" method="POST">
+      
+            
+            <input type="hidden" name="id" value="<%=data._id%>" required="required" />
+            <label> Enter New Password </label><br>
+            <input type="password" name="password" value="<%=data.password%>" required="required" placeholder="Min 8 Characters" />
+             <br><br>   <br> <br>
+            <button type="submit" class="button">Update Password </button>
+    </form>
+    </center>
+</body>
+<style>
+              
+    * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+    
+    html { width: 100%; height:100%; overflow:hidden; }
+    
+    body { 
+      width: 100%;
+      height:100%;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding-top: 5%;
+          background: linear-gradient(to bottom, #d298d4 0%, #43a2b3 100%);
+
+    
+    }
+    form{
+        font-size:medium;
+        width: 250px;
+        height: 350px;
+        box-shadow: cadetblue;
+       padding-top: 5%;
+     font-family: 'calibri';
+       background: linear-gradient(to bottom, #f6bff8 0%, #43a2b3 100%);
+       font-weight: bold;
+        color:black;
+       
+        
+    }
+    label{
+        margin-left: 40px;
+    }
+    div{
+        padding: 10px;
+    }
+    a:link, a:visited {
+      background-color: #36f436;
+      color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    button{
+        background-color:  #43a2b3 ;
+        color: white;
+        font-weight: bold;
+        font-family: 'calibri';
+        height: 30px;
+        width: 130px;
+        border: none;
+        box-shadow: thistle 2px 2px;
+    }
+    h2{
+             
+        font-family: 'calibri';
+        width: 100% ;
+        color: #2c6a75;
+        text-shadow: 2px 2px gray;
+        text-align: center;
+        font-size: x-large;
+    
+    }
+            
+    
+    
+</style>
