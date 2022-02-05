@@ -47,9 +47,11 @@
 
                         
                                  <button class="buttonU" id="add" style="margin-left: 20px;" onclick="window.location.href = '/member/updateadview/<%=dt._id%>';">
-                                    Update
-                                 </button>
-                            
+                                    Update Ad Details
+                                 </button><br><br>
+                                 <button class="buttonD" id="add" style="margin-left: 20px;" onclick="window.location.href = '/member/imgreupload/<%=dt._id%>';">
+                                    Update Product Image
+                                 </button><br><br>
                                 <button class="buttonK" id="add" style="margin-left: 20px;" onclick="window.location.href = '/member/delads/<%=dt._id%>';">
                                    Delete 
                                 </button>
@@ -70,8 +72,8 @@
         <button class="button" id="view" onclick="window.location.href = '/member/clearad/:id';">
             Delete All Ad Posts
         </button>
-        <button class="button" id="logout"  onclick="window.location.href = '/member/logout';">
-            Logout
+        <button class="button" id="logout"  onclick="window.location.href = '/member/';">
+            Member Home 
         </button>
     </body>
     <style>
@@ -129,7 +131,7 @@
             text-shadow: gray 2px 2px;
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
-            height: 40px;
+            height: 50px;
             border: none;
           
         }
@@ -139,8 +141,10 @@
             text-shadow: gray 2px 2px;
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
-            height: 30px;
+            height: 50px;
             border: none;
+            width: 180px;
+            font-size: medium;
           
         }
         .buttonU{
@@ -149,8 +153,10 @@
             text-shadow: gray 2px 2px;
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
-            height: 30px;
+            height: 50px;
             border: none;
+            width: 180px;
+            font-size: medium;
           
         }
        .buttonD{
@@ -159,8 +165,10 @@
             text-shadow: gray 2px 2px;
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
-            height: 30px;
+            height: 50px;
             border: none;
+            width: 180px;
+            font-size: medium;
           
         }
           

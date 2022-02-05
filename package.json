@@ -13,7 +13,6 @@
   },
   "scripts": {
     "start": "node server.js"
-
   },
   "name": "adproject",
   "version": "1.0.0",

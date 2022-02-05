@@ -39,6 +39,10 @@ module.exports = function(member){
     member.route("/updatepasswordview/:id").get(controller.updatePasswordview)
     member.route("/updatepassword").post(controller.updatePassword)
 
+    //update image
+    member.route("/imgreupload/:id").get(controller.reuploadImgView)
+    member.route("/imgreupload").post(controller.reuploadAdImg)
+
     //delete ad
     member.route("/delads/:id").get(controller.deleteAds) 
 

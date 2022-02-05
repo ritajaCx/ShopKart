@@ -229,10 +229,21 @@ var controller = {
             image : req.body.adimage 
 
         }
-        dbcontroller.dbcontroller.updatead(prodata3)
-        await res.redirect("/member/viewads/"+loginUser._id.toString())
+        await dbcontroller.dbcontroller.updatead(prodata3)
+        res.redirect("/member/viewads/"+loginUser._id.toString())
 
       
+    },
+
+    reuploadImgView:function(req,res){
+        var id = req.params.id 
+        dbcontroller.dbcontroller.reuploadimgview(id,res)        
+    },
+
+    reuploadAdImg : async function (req,res,id) {
+        var form = new formidable.IncomingForm()
+        await dbcontroller.dbcontroller.reuploadadimg(req,form,loginUser)
+        res.redirect("/member/") 
     },
 
     deleteAll : function(req,res){

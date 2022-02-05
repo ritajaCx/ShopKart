@@ -306,6 +306,69 @@ var dbcontroller={
             console.log("Ad updated Successfully with id ", selid)
         })
     },
+
+    reuploadimgview: function (id, res) {
+        var collection = db.collection("ad")
+        var newid = mongodb.ObjectId(id)
+        var filter = {
+            "_id": newid
+        }
+        var adData = null;
+        collection.find(filter).toArray(function (err, result) {
+            if (err) {
+                console.log(err)
+                return
+            }
+            result.forEach(element => {
+                adData = element
+            })
+            res.render("member_updateimg", { title: "view", data: adData })
+        })
+    },
+
+    reuploadadimg : function(req, form, loginUser) {
+       
+          
+        form.parse(req, function (err, fields, files) {
+         
+            var collection = db.collection("ad")
+            var selId = fields.id
+            var filter = {
+                "_id": mongodb.ObjectId(selId)
+            }
+           // console.log(selectedId)
+            var oldPath = files.adimage.filepath; //temp location 
+            var extension = files.adimage.originalFilename.split('.').pop()
+            console.log(extension)
+            var adData = {
+                $set: {
+                    'image': extension
+                }
+            }
+            collection.updateMany(filter, adData, function (err, result) {
+                if (err) {
+                    console.log("err in img update", err)
+                    return
+                }
+            })
+            var adId = fields.id
+            var newFileNameName = "./public/media/" + adId + "." + extension;
+            fs.readFile(oldPath, function (err, data) {
+                if (err) {
+                    console.log("Error in upload : ", err)
+                    return
+                }
+                //write
+                fs.writeFile(newFileNameName, data, function (err) {
+                    if (err) {
+                        console.log("Error in upload : ", err)
+                        return
+                    }
+                })
+            })
+    
+        })
+    },
     
 
     deactivateaccount: function (res, id) {
