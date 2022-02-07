@@ -11,7 +11,7 @@ function loginStaff (email, password){
         "email" : email,
         "password" : password
     }
-    var userdata =  collection.findOne(filter)  //return the 1st matching document from mongodb
+    var userdata =  collection.findOne(filter)  
     return userdata;   
 }
 
@@ -107,9 +107,10 @@ var dbcontroller={
         })
     },
 
+    
+    
     viewads: function (res) {
 
-       
         var adcollection = db.collection("ad")
     
             adcollection.find().sort({ timestamp: -1 }).toArray(function (err, result) {
@@ -126,9 +127,6 @@ var dbcontroller={
     }  
     
    
-
-
-
 
 
 module.exports = {dbcontroller, loginStaff, viewMemdet,reqdetview, viewmem }
