@@ -96,7 +96,7 @@ var controller = {
 
             //send this email
           
-            emailController.send(email, "ashokraj.kp@otomeyt.ai",  "Password Recovery",  "Your password is : " + "<b>" + password + "</b>")
+            emailController.sendwithoutcc(email, "ashokraj.kp@otomeyt.ai",  "Password Recovery",  "Your password is : " + "<b>" + password + "</b>")
             res.render("member_login", {title : "Member Login Page"})
            
         }
