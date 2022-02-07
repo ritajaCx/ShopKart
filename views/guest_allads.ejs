@@ -9,6 +9,7 @@
         <h1> AdManager</h1>
         
         <h2>Advertisement Dashboard</h2>
+        <center>
         <table class="mytable">
             <thead>
                 <tr>
@@ -48,9 +49,10 @@
                 %>
             </tbody>
         </table>
+        </center>
         <br>
         
-        <button class="button" id="logout"  onclick="window.location.href = '/guest/';">
+        <button class="button" id="logout" style="margin-top: 200px;" onclick="window.location.href = '/guest/';">
             Home       </button>
     </body>
     <style>
@@ -62,63 +64,65 @@
               body { 
                 width: 100%;
                 height:100%;
-                font-family: 'Times New Roman', Times, serif;
+                font-family: 'calibri';
+                background-color:rgb(155, 191, 202) ;
                
               }
           h1 {
               width: 99%;
-              background-color: rgb(188, 245, 124);
+         
               text-align: center;
-              color: black;
+              color: white;
               height: 70px;
               margin: 0px 0px 0px 0px;
               padding-top: 2%;
               text-shadow: gray 2px 2px;
-              font-family: 'Times New Roman', Times, serif;
+              font-family: 'calibri';
       
           }
           h2 {
               width: 99%;
-              background-color: rgb(10, 8, 156);
+            
               text-align: center;
-              color:white;
+              color:rgb(74, 121, 134) ;
               height: 50px;
               padding-top: 1%;
-              margin: 0px 0px 0px 0px;
-              font-family: 'Times New Roman', Times, serif;
+              margin-top: 20px;
+              font-family: 'calibri';
+              text-shadow: darkgray 2px 1px;
       
           }
       
           .mytable {
               border-collapse: collapse;
-              width: 99%;
+              width: 60%;
               table-layout: fixed;
           }
       
           
           td {
-              border: 1px solid black;
+              border: 1px solid rgb(93, 152, 168);
               height: 40px;
               text-align: center;
-              font-family: 'Times New Roman', Times, serif;
+              font-family: 'calibri';
           }
           button{
-            background-color: rgb(11, 90, 81);
-            color: white;
-            text-shadow: gray 2px 2px;
+            
+            color: black;
+            box-shadow: gray 2px 2px;
             font-weight: bold;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'calibri';
             height: 40px;
-            border: none;
+        
             width: 100px;
           
         }
         .buttonK{
             background-color: rgb(90, 11, 11);
             color: white;
-            text-shadow: gray 2px 2px;
+            
             font-weight: bold;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'calibri';
             height: 30px;
             border: none;
           
@@ -144,10 +148,10 @@
           
         }
           
-          th {
-              border: 1px solid black;
+        th {
+              border:none;
               height: 40px;
-              background-color: rgb(9, 194, 194);
+              background-color:rgb(93, 152, 168);
           }
           tbody tr {
               background-color: #f2f2f2;

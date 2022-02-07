@@ -295,7 +295,7 @@ var dbcontroller={
             title: data.title,
             description : data.description,
             price : data.price,
-            createdDateTime : Date.now()
+           
             }
         }
         collection.updateMany(filter, jsondata3,function(err,result){

@@ -8,7 +8,7 @@
     </head>
     <body>
 
-        <h2> Member Detail </h2>
+        <h2> Member Details </h2>
        
         <table>
 
@@ -18,7 +18,7 @@
                         <th>Name</th>
                         <th>Email ID </th>
                         <th>Password</th>
-                        <th>Govt ID Proof</th>
+                        <th>Aadhar No.</th>
                         <th>Location</th>
                         <th>Address</th>
                         <th>PIN Code</th>
@@ -47,40 +47,40 @@
                     <br>
                 
                     <center>
+                      
                         <h3>Posted Advertisements</h3>
-                    <table style="background-color: aqua;" class="table2">
-                        <thead>
-                            <tr>
-                                <th>Image</th>
-                                <th>Title </th>
-                                <th style="width: 20px;">Price</th> 
-                                <th>Posted On</th>                                     
-                            </tr>
-                        </thead>
-                        <tbody>
+
+                        <div class="box">
+                
                             <% if(adData.length> 0 )
                                 {
-                                    adData.forEach(function (data){
+                                adData.forEach(function (data){
                                 %>
-                                <tr>
+                                
                                     <% var imgUrl = "/media/"+data._id+"."+data.image%>
-                                    <td>
-                                        <img style="height: 200px ;width: 200px;" src=<%=imgUrl%>>
-                                    </td>                
-                                    <td>
-                                        <%=data.title%>
-                                    </td>
-
-                                    <td>
-                                        <%=data.price%>
-                                    </td> 
-                                    <td>
-                                        <%=data.createdDateTime%>
-                                    </td> 
-
-                                </tr>
-                                <% }) } %>
-                            </table>   </tbody></center>
+                                    <div class="boximg">
+                                        <img style="width:200px;height:200px; " src=<%=imgUrl%>><br>
+                                        <p> <%= data.title %></p><br> 
+                                        <a>Price : </a>
+                                            <%= data.price %><br>
+                                            <a>Description :  </a>
+                                            <%=data.description%><br>
+                                        <a>Posted On :  </a>
+                                            <%=data.createdDateTime%><br><br>
+                                       
+                                        
+                                        <button class="buttonK" id="add" onclick="window.location.href = '/admin/viewaddet/<%=data._id%>';">
+                                            Request for Details
+                                         </button>
+                                        
+                                    
+                                    </div> 
+                                <% 
+                             }) 
+                               }
+                            %>
+                            </div>
+                 
          
         </body>
         <style>
@@ -92,43 +92,55 @@
                   body { 
                     width: 100%;
                     height:100%;
-                    font-family: 'Times New Roman', Times, serif;
+                    font-family: 'calibri';
+                    background-color: rgb(155, 191, 202);
                    
                   }
-              h1 {
-                  width: 99%;
-                  background-color: rgb(188, 245, 124);
-                  text-align: center;
-                  color: black;
-                  height: 70px;
-                  margin: 0px 0px 0px 0px;
-                
-                  text-shadow: gray 2px 2px;
-                  font-family: 'Times New Roman', Times, serif;
           
-              }
               h2 {
                   width: 99%;
-                  background-color: rgb(10, 8, 156);
+              
                   text-align: center;
                   color:white;
+                  text-shadow: darkgray 2px 1px;
                   height: 50px;
                   padding-top: 1%;
                   margin: 0px 0px 0px 0px;
-                  font-family: 'Times New Roman', Times, serif;
+                  font-family: 'calibri';
+                  font-size: 26px;
           
               }
+              .box div{
+                  padding: 10px;
+                  margin-top : 10px
+              }
+
+              .boximg {
+            float: left;
+            width: 25%;
+            padding: 5px;
+            }
+            .boximg p{
+                font-weight: bold;
+                text-shadow: rgb(156, 154, 154) 2px 2px;
+            }
+            .boximg a{
+                font-weight: bold;
+            }
               h3 {
-                  width: 70%;
-                  background-color: rgb(218, 77, 35);
+                  width: auto;
+                  font-weight: bold;
+                  font-size: 20px;
+             
                   text-align: center;
                   color:white;
+                  text-shadow: darkgray 2px 1px;
                   height: 50px;
-                  padding-top: 1%;
+              
                   margin-right: 30px;
-                  margin-top: 80px;
+                  
                   margin: 0px 0px 0px 0px;
-                  font-family: 'Times New Roman', Times, serif;
+                  font-family: 'calibri';
           
               }
           
@@ -140,15 +152,15 @@
             
              
               td {
-                  border: 1px solid black;
-                  height: 30px;
-                  text-align: center;
-                  font-family: 'Times New Roman', Times, serif;
-              }
+              border: 1px solid rgb(93, 152, 168);
+              height: 40px;
+              text-align: center;
+              font-family: 'calibri';
+          }
               button{
                 background-color: rgb(11, 90, 81);
                 color: white;
-                text-shadow: gray 2px 2px;
+              
                 font-weight: bold;
                 font-family: 'Times New Roman', Times, serif;
                 height: 40px;
@@ -156,31 +168,23 @@
               
             }
             .buttonK{
-                background-color: rgb(90, 11, 11);
-                color: white;
-                text-shadow: gray 2px 2px;
+                
+                color: black;
+                box-shadow: gray 2px 2px;
                 font-weight: bold;
-                font-family: 'Times New Roman', Times, serif;
+                font-family: 'calibri';
                 height: 30px;
                 border: none;
+                background-color: white;
               
             }
-           .buttonD{
-                background-color: rgb(45, 134, 156);
-                color: white;
-                text-shadow: gray 2px 2px;
-                font-weight: bold;
-                font-family: 'Times New Roman', Times, serif;
-                height: 30px;
-                border: none;
-              
-            }
-              
-              th {
-                  border: 1px solid black;
-                  height: 40px;
-                  background-color: rgb(9, 194, 194);
-              }
+          
+            
+            th {
+              border:none;
+              height: 40px;
+              background-color:rgb(93, 152, 168);
+          }
               tbody tr {
                   background-color: #f2f2f2;
                   padding: 10%

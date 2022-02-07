@@ -1,94 +1,99 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="/css/style.css" />
+</title>
     <title>
         <%= title %>
+      
     </title>
 </head>
+<body class="img">
+    <center>
+        <h1>Welcome, Admin</h1>
+<!--     
+        <h2>Welcome, Admin </h2> -->
+        <br><br><br><br><br>
+    
+       
+    
+        <button class="button" id="add" onclick="window.location.href = '/admin/viewads';">
+            Advertisements
+        </button>
+        <button class="button" id="view"  onclick="window.location.href = '/admin/viewmem';">
+            Registered Members
+        </button>
+        <button class="logout" id="logout" onclick="window.location.href = '/admin/logout';">
+            Logout
+        </button>
+    </center>
+    </body>
+</html>
 
-<body>
-<center>
-    <h1>AdManager</h1>
-
-    <h2>Welcome, Admin </h2>
-    <br><br><br><br><br>
-
-   
-
-    <button class="button" id="add" onclick="window.location.href = '/admin/viewads';">
-        Advertisements
-    </button><br><br>
-    <button class="button" id="view"  onclick="window.location.href = '/admin/viewmem';">
-        Registered Members
-    </button><br><br>
-    <button class="logout" id="logout" onclick="window.location.href = '/admin/logout';">
-        Logout
-    </button>
-</center>
-</body>
 <style>
-  
-    * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
-          
-          html { width: 100%; height:100%; overflow:hidden; }
-          
-          body { 
-            width: 100%;
-            height:100%;
-            font-family: 'Times New Roman', Times, serif;
-            /* background: linear-gradient(to bottom, #e0a8e0 0%, #43a2b3 100%); */
-           
-          }
-      h1 {
-         
-          width: 100%;
-          height: 15%;
-          background-color: rgb(188, 245, 124);
-          padding-top: 3%;
-          text-align: center;
-          color: black;
-          text-shadow: gray 2px 2px;
-        
-          margin: 0px 0px 0px 0px;
-          font-family: 'Times New Roman', Times, serif;
-  
-      }
-      h2 {
-          width: 100%;
-          background-color: rgb(10, 8, 156);
-          text-align: center;
-          padding-top: 1%;
-          color:white;
-          height: 50px;
-          margin: 0px 0px 0px 0px;
-          font-family: 'Times New Roman', Times, serif;
-  
-      }
-      button{
-            background-color: rgb(11, 90, 81);
-            color: white;
-            text-shadow: gray 2px 2px;
+    .img{
+        background:url("https://i.pinimg.com/originals/94/44/b0/9444b0d9ee9526943d3e43887343ad64.png");
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+       
+      -moz-background-size: cover;
+      background-size: cover;
+        background-size: 520px;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+
+    button{
+            /* background-color: rgb(214, 212, 212); */
+            opacity: 30;
+            color: rgb(2, 19, 44);
+    
             font-weight: bold;
-            font-family: 'Times New Roman', Times, serif;
+            font-family:'calibri' ;
             height: 50px;
+            margin-top: 24%;
             border: none;
             font-size: medium;
+            backdrop-filter: blur(5px); 
           
         }
         .logout{
-                        background-color: rgb(90, 11, 11);
-                        color: white;
-                        text-shadow: gray 2px 2px;
+                        
+                        color: rgb(85, 10, 10);
+                
                         font-weight: bold;
-                        font-family: 'Times New Roman', Times, serif;
+                        font-family: 'calibri';
                         height: 50px;
-                        width: 100px;
+                        width: 70px;
                        margin-top: 170px;
                         border: none;
                         font-size: medium;
                       
                     }
+
+                    h1 {
+         
+         width: 100%;
+         height: 15%;
+         text-shadow: darkgray 2px 1px;
+         padding-top: 3%;
+         text-align: center;
+         color: white;
+    
+       
+         margin: 0px 0px 0px 0px;
+         font-family: 'calibri';
+ 
+     }
+     h2 {
+         width: 100%;
       
-  
-  </style>
-  </html>
+         text-align: center;
+        text-shadow: darkgray 2px 1px;
+         color:white;
+         height: 90px;
+         margin: 0px 0px 0px 0px;
+         font-family: 'calibri';
+ 
+     }
+    </style>

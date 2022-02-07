@@ -39,13 +39,13 @@ function viewMemdet (res,id){
         })
 }
 
-function reqdetview (id,res){
+function reqdetview (res,id){
 
         var adcollection = db.collection("ad")
         var membercollection = db.collection("member")
         var newId = mongodb.ObjectId(id)
         var filter = {
-            "memberId": newId
+            "_id": newId
         }
         var adData = null;
         adcollection.find(filter).toArray(function (err, result) {
@@ -55,6 +55,7 @@ function reqdetview (id,res){
             }
             result.forEach(element => {
                 adData = element
+                
             })
             var memberid = adData.memberId
 
