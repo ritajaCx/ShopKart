@@ -297,11 +297,8 @@ var dbcontroller={
             title: data.title,
             description : data.description,
             price : data.price,
-<<<<<<< HEAD
-           
-=======
 
->>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
+
             }
         }
         collection.updateMany(filter, jsondata3,function(err,result){
