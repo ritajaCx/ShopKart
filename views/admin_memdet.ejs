@@ -48,39 +48,33 @@
                 
                     <center>
                         <h3>Posted Advertisements</h3>
-                    <table style="background-color: aqua;" class="table2">
-                        <thead>
-                            <tr>
-                                <th>Image</th>
-                                <th>Title </th>
-                                <th style="width: 20px;">Price</th> 
-                                <th>Posted On</th>                                     
-                            </tr>
-                        </thead>
-                        <tbody>
+                    <div class="box">
+                
                             <% if(adData.length> 0 )
                                 {
-                                    adData.forEach(function (data){
+                                adData.forEach(function (data){
                                 %>
-                                <tr>
+                                
                                     <% var imgUrl = "/media/"+data._id+"."+data.image%>
-                                    <td>
-                                        <img style="height: 200px ;width: 200px;" src=<%=imgUrl%>>
-                                    </td>                
-                                    <td>
-                                        <%=data.title%>
-                                    </td>
-
-                                    <td>
-                                        <%=data.price%>
-                                    </td> 
-                                    <td>
-                                        <%=data.createdDateTime%>
-                                    </td> 
-
-                                </tr>
-                                <% }) } %>
-                            </table>   </tbody></center>
+                                    <div class="boximg">
+                                        <img style="width:200px;height:200px; border:4px solid darkcyan;" src=<%=imgUrl%>><br>
+                                        <p> <%= data.title %></p><br> 
+                                        Price : <%= data.price %><br>
+                                        Description : <%=data.description%><br>
+                                        Posted On :  <%=data.createdDateTime%><br><br>
+                                        
+                                        <button class="buttonK" id="add" onclick="window.location.href = '/admin/viewaddet/<%=data._id%>';">
+                                            Request for Details
+                                         </button>
+                                        
+                                    
+                                    </div> 
+                                <% 
+                             }) 
+                               }
+                            %>
+                            </div>
+                 
          
         </body>
         <style>
@@ -118,26 +112,38 @@
                   font-family: 'Times New Roman', Times, serif;
           
               }
+              
+              
+               .box div{
+                  padding: 10px;
+                  margin-top : 10px
+              }
+
+              .boximg {
+            float: left;
+            width: 25%;
+            padding: 5px;
+            }
+            .boximg p{
+                font-weight: bold;
+            }
               h3 {
-                  width: 70%;
-                  background-color: rgb(218, 77, 35);
+                  width: auto;
+                  font-weight: bold;
+                  font-size: x-large;
+                  background-color: rgb(188, 245, 124);
                   text-align: center;
-                  color:white;
+                  color:rgb(10, 8, 156);
                   height: 50px;
-                  padding-top: 1%;
+                  padding-top: 1.5%;
                   margin-right: 30px;
                   margin-top: 80px;
                   margin: 0px 0px 0px 0px;
                   font-family: 'Times New Roman', Times, serif;
           
               }
-          
-              .mytable {
-                  border-collapse: collapse;
-                  width: 99%;
-                  table-layout: fixed;
-              }
-            
+         
+           
              
               td {
                   border: 1px solid black;
