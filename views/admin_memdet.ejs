@@ -53,7 +53,6 @@
 
                         <div class="box">
 
-                    <div class="box">
 
                 
                             <% if(adData.length> 0 )
@@ -74,11 +73,7 @@
                                             <%=data.createdDateTime%><br><br>
                                        
 
-                                        <img style="width:200px;height:200px; border:4px solid darkcyan;" src=<%=imgUrl%>><br>
-                                        <p> <%= data.title %></p><br> 
-                                        Price : <%= data.price %><br>
-                                        Description : <%=data.description%><br>
-                                        Posted On :  <%=data.createdDateTime%><br><br>
+                   
 
                                         
                                         <button class="buttonK" id="add" onclick="window.location.href = '/admin/viewaddet/<%=data._id%>';">
