@@ -45,7 +45,7 @@ function reqdetview (id,res){
         var membercollection = db.collection("member")
         var newId = mongodb.ObjectId(id)
         var filter = {
-            "memberId": newId
+            "_id": newId
         }
         var adData = null;
         adcollection.find(filter).toArray(function (err, result) {
