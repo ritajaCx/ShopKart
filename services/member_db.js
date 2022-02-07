@@ -238,6 +238,8 @@ var dbcontroller={
             res.render("member_updatepass", {title :"Update Password", data: prodata2})
         })
     },
+    
+    
 
     updatepassword : function( data, id){
 
@@ -295,7 +297,11 @@ var dbcontroller={
             title: data.title,
             description : data.description,
             price : data.price,
+<<<<<<< HEAD
            
+=======
+
+>>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
             }
         }
         collection.updateMany(filter, jsondata3,function(err,result){
@@ -325,9 +331,9 @@ var dbcontroller={
             res.render("member_updateimg", { title: "view", data: adData })
         })
     },
+    
 
     reuploadadimg : function(req, form, loginUser) {
-       
           
         form.parse(req, function (err, fields, files) {
          
@@ -398,6 +404,8 @@ var dbcontroller={
         res.redirect("/member/login")
 
     },
+    
+    
     deleteall : function(res,id){
         var collection = db.collection("ad")
         var filter = {
@@ -414,8 +422,7 @@ var dbcontroller={
         })
         res.redirect("/member/viewads/" + id)
 
-    }
-    ,
+    },
 
 
 
@@ -437,21 +444,6 @@ var dbcontroller={
     },
    
     
-   
-    // 
-    //     collection.deleteOne(filter, function(err, result){
-    //         if(err){
-    //             console.log("error in deleting student details", err)
-    //             return
-    //         }
-    //         console.log("data deleted successfully for student with id", delid)
-    //     })
-    // },
-
-    
-    
-    
-
 
 
 }

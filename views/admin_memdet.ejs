@@ -49,8 +49,12 @@
                     <center>
                       
                         <h3>Posted Advertisements</h3>
+<<<<<<< HEAD
 
                         <div class="box">
+=======
+                    <div class="box">
+>>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
                 
                             <% if(adData.length> 0 )
                                 {
@@ -59,6 +63,7 @@
                                 
                                     <% var imgUrl = "/media/"+data._id+"."+data.image%>
                                     <div class="boximg">
+<<<<<<< HEAD
                                         <img style="width:200px;height:200px; " src=<%=imgUrl%>><br>
                                         <p> <%= data.title %></p><br> 
                                         <a>Price : </a>
@@ -68,6 +73,13 @@
                                         <a>Posted On :  </a>
                                             <%=data.createdDateTime%><br><br>
                                        
+=======
+                                        <img style="width:200px;height:200px; border:4px solid darkcyan;" src=<%=imgUrl%>><br>
+                                        <p> <%= data.title %></p><br> 
+                                        Price : <%= data.price %><br>
+                                        Description : <%=data.description%><br>
+                                        Posted On :  <%=data.createdDateTime%><br><br>
+>>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
                                         
                                         <button class="buttonK" id="add" onclick="window.location.href = '/admin/viewaddet/<%=data._id%>';">
                                             Request for Details
@@ -110,7 +122,13 @@
                   font-size: 26px;
           
               }
+<<<<<<< HEAD
               .box div{
+=======
+              
+              
+               .box div{
+>>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
                   padding: 10px;
                   margin-top : 10px
               }
@@ -122,14 +140,18 @@
             }
             .boximg p{
                 font-weight: bold;
+<<<<<<< HEAD
                 text-shadow: rgb(156, 154, 154) 2px 2px;
             }
             .boximg a{
                 font-weight: bold;
+=======
+>>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
             }
               h3 {
                   width: auto;
                   font-weight: bold;
+<<<<<<< HEAD
                   font-size: 20px;
              
                   text-align: center;
@@ -137,19 +159,27 @@
                   text-shadow: darkgray 2px 1px;
                   height: 50px;
               
+=======
+                  font-size: x-large;
+                  background-color: rgb(188, 245, 124);
+                  text-align: center;
+                  color:rgb(10, 8, 156);
+                  height: 50px;
+                  padding-top: 1.5%;
+>>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
                   margin-right: 30px;
                   
                   margin: 0px 0px 0px 0px;
                   font-family: 'calibri';
           
               }
-          
-              .mytable {
+                  .mytable {
                   border-collapse: collapse;
                   width: 99%;
                   table-layout: fixed;
               }
-            
+         
+           
              
               td {
               border: 1px solid rgb(93, 152, 168);

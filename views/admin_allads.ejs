@@ -8,9 +8,14 @@
     <body >
         <!-- <h1> AdManager</h1> -->
         
+<<<<<<< HEAD
         <h1>Advertisement Dashboard</h1>
 
         <div class="box">
+=======
+        <h2>Advertisement Dashboard</h2>
+           <div class="box">
+>>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
                 
             <% if(taskData.length> 0 )
                 {
@@ -19,12 +24,19 @@
                 
                     <% var imgUrl = "/media/"+data._id+"."+data.image%>
                     <div class="boximg">
+<<<<<<< HEAD
                         <img style="width:200px;height:200px; " src=<%=imgUrl%>><br>
                         <p> <%= data.title %></p><br> 
                         <a>Price : </a>
                             <%= data.price %><br>
                         <a>Posted On :  </a>
                             <%=data.createdDateTime%><br><br>
+=======
+                        <img style="width:200px;height:200px; border:4px solid rgb(188, 245, 124);" src=<%=imgUrl%>><br>
+                        <p> <%= data.title %></p><br> 
+                        Price : <%= data.price %><br>
+                        Posted On :  <%=data.createdDateTime%><br><br>
+>>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
                         
                         <button class="buttonK" id="add" onclick="window.location.href = '/admin/viewaddet/<%=data._id%>';">
                             Request for Details
@@ -37,6 +49,11 @@
                }
             %>
             </div>
+<<<<<<< HEAD
+=======
+        
+        <br>
+>>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
         
      
     </body>
@@ -73,6 +90,10 @@
               border-style: white 2px 2px;
           }
       
+<<<<<<< HEAD
+=======
+         
+>>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
             .boximg {
             float: left;
             width: 25%;
@@ -80,12 +101,18 @@
             }
             .boximg p{
                 font-weight: bold;
+<<<<<<< HEAD
                 text-shadow: darkgray 2px 1px;
                 font-size: medium;
             }
           .boximg a{
               font-weight: bold;
           }
+=======
+            }
+      
+          
+>>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
           td {
               border: 1px solid black;
               height: 40px;
@@ -99,6 +126,7 @@
           
         
         .buttonK{
+<<<<<<< HEAD
             
             color: rgb(90, 11, 11);
             background-color: white;
@@ -113,6 +141,39 @@
         }
        
           
+=======
+            background-color: rgb(90, 11, 11);
+            color: white;
+     
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            height: 30px;
+            border: none;
+          
+        }
+        .buttonU{
+            background-color: rgb(163, 142, 23);
+            color: white;
+            text-shadow: gray 2px 2px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            height: 30px;
+            border: none;
+          
+        }
+       .buttonD{
+            background-color: rgb(45, 134, 156);
+            color: white;
+            text-shadow: gray 2px 2px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            height: 30px;
+            border: none;
+          
+        }
+          
+         
+>>>>>>> b60547c2c1c6687166ab0a5e02d61085f2d8cbca
       
             
         
