@@ -191,7 +191,7 @@ var controller = {
             pincode :req.body.pincode,
             contact :req.body.contact
         }
-
+        loginUser._id=prodata.id
         dbcontroller.dbcontroller.updateprofile(prodata)
         await res.redirect("/member/")
     },
