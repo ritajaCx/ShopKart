@@ -2,7 +2,7 @@ const mongodb = require('mongodb')
 const mongoclient = require('mongodb').MongoClient
 const formidable = require('formidable')
 const fs = require('fs')
-var url = "mongodb://127.0.0.1:27017"
+var url = "mongodb+srv://ritaja11:ritaja11@cluster0.smtjr.mongodb.net/adproject"
 
 var db;
 
